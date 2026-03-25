@@ -1,10 +1,52 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR" class="dark">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>lp-globaldex</title>
+    <title>Bandex | Global Dex Protocol</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#bd9dff",
+              "secondary": "#c38bf5",
+              "surface-container": "#1a1919",
+              "on-primary": "#3c0089",
+              "surface-container-lowest": "#000000",
+              "on-surface": "#ffffff",
+              "on-background": "#ffffff",
+              "outline-variant": "#494847",
+              "on-secondary": "#3b0065",
+              "inverse-primary": "#742fe5",
+              "primary-fixed": "#b28cff",
+              "surface-dim": "#0e0e0e",
+              "surface-container-highest": "#262626",
+              "surface": "#0e0e0e",
+              "on-surface-variant": "#adaaaa",
+              "inverse-surface": "#fcf8f8",
+              "surface-tint": "#bd9dff",
+              "surface-bright": "#2c2c2c",
+              "background": "#0e0e0e",
+              "surface-container-low": "#131313",
+              "outline": "#777575",
+              "primary-container": "#b28cff",
+              "primary-dim": "#8a4cfc",
+              "surface-container-high": "#201f1f",
+              "surface-variant": "#262626",
+            },
+            fontFamily: {
+              "sans": ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
