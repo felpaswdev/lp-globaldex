@@ -38,7 +38,7 @@ export default function GlobeCanvas() {
     const pointsGeo = new THREE.BufferGeometry()
     pointsGeo.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3))
     const pointsMat = new THREE.PointsMaterial({
-      color: 0xbd9dff,
+      color: 0x00C3A6,
       size: 0.013,
       transparent: true,
       opacity: 0.55,
@@ -70,7 +70,7 @@ export default function GlobeCanvas() {
     const lineGeo = new THREE.BufferGeometry()
     lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePos, 3))
     const lineMat = new THREE.LineBasicMaterial({
-      color: 0xbd9dff,
+      color: 0x00C3A6,
       transparent: true,
       opacity: 0.07,
     })

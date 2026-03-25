@@ -16,19 +16,113 @@ body {
 }
 
 .liquid-gradient {
-  background: radial-gradient(circle at 50% 50%, rgba(189, 157, 255, 0.15) 0%, rgba(14, 14, 14, 1) 70%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 195, 166, 0.08) 0%, rgba(14, 14, 14, 1) 70%);
+}
+
+/* ── Liquid Hero Background ── */
+.lb-container {
+  position: absolute;
+  inset: -20%;            /* overflow so filter edges aren't clipped */
+  filter: url(#liquid-distort) blur(60px);
+  pointer-events: none;
+}
+
+.lb {
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* 8-stop organic paths → each blob takes a different winding route */
+@keyframes lb-a {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  13%  { transform: translate(140px, -100px) scale(1.24); }
+  27%  { transform: translate(-80px,  120px) scale(0.80); }
+  40%  { transform: translate(170px,   80px) scale(1.20); }
+  54%  { transform: translate(-120px, -65px) scale(1.35); }
+  68%  { transform: translate(100px,  150px) scale(0.85); }
+  82%  { transform: translate(-160px,  55px) scale(1.15); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+@keyframes lb-b {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  15%  { transform: translate(-110px,  80px) scale(1.18); }
+  30%  { transform: translate(90px,  -110px) scale(0.78); }
+  48%  { transform: translate(-70px,  130px) scale(1.28); }
+  62%  { transform: translate(130px,   30px) scale(0.88); }
+  78%  { transform: translate(-90px,  -80px) scale(1.12); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+@keyframes lb-c {
+  0%   { transform: translate(0px,   0px)   scale(1);    }
+  18%  { transform: translate(75px,  110px)  scale(0.88); }
+  36%  { transform: translate(-130px, -50px) scale(1.22); }
+  52%  { transform: translate(100px,  -90px) scale(0.82); }
+  70%  { transform: translate(-60px,  100px) scale(1.18); }
+  86%  { transform: translate(110px,   60px) scale(0.92); }
+  100% { transform: translate(0px,   0px)   scale(1);    }
+}
+
+@keyframes lb-d {
+  0%   { transform: translate(0px,  0px)   scale(1);    }
+  22%  { transform: translate(-90px, -120px) scale(1.30); }
+  44%  { transform: translate(120px,  60px)  scale(0.75); }
+  66%  { transform: translate(-50px,  140px) scale(1.25); }
+  88%  { transform: translate(80px,  -70px)  scale(0.90); }
+  100% { transform: translate(0px,  0px)   scale(1);    }
+}
+
+@keyframes lb-e {
+  0%   { transform: translate(0px,  0px)   scale(1);    }
+  20%  { transform: translate(60px, 130px)  scale(1.15); }
+  40%  { transform: translate(-140px, 40px) scale(0.80); }
+  60%  { transform: translate(110px, -100px) scale(1.20); }
+  80%  { transform: translate(-80px, -60px)  scale(0.88); }
+  100% { transform: translate(0px,  0px)   scale(1);    }
+}
+
+.lb-a {
+  width: 640px; height: 640px;
+  background: radial-gradient(circle, rgba(0, 195, 166, 0.55) 0%, transparent 65%);
+  top: 28%; left: 38%;
+  animation: lb-a 24s ease-in-out infinite;
+}
+.lb-b {
+  width: 480px; height: 480px;
+  background: radial-gradient(circle, rgba(0, 165, 140, 0.45) 0%, transparent 65%);
+  top: 15%; left: 20%;
+  animation: lb-b 28s ease-in-out infinite 2s;
+}
+.lb-c {
+  width: 420px; height: 420px;
+  background: radial-gradient(circle, rgba(0, 195, 166, 0.40) 0%, transparent 65%);
+  top: 55%; left: 60%;
+  animation: lb-c 20s ease-in-out infinite 5s;
+}
+.lb-d {
+  width: 340px; height: 340px;
+  background: radial-gradient(circle, rgba(0, 195, 166, 0.35) 0%, transparent 65%);
+  top: 20%; left: 65%;
+  animation: lb-d 26s ease-in-out infinite 1s;
+}
+.lb-e {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(0, 155, 130, 0.50) 0%, transparent 65%);
+  top: 65%; left: 25%;
+  animation: lb-e 18s ease-in-out infinite 4s;
 }
 
 .glass-panel {
   background: rgba(38, 38, 38, 0.4);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  border: 1px solid rgba(189, 157, 255, 0.1);
+  border: 1px solid rgba(0, 195, 166, 0.1);
 }
 
 .hero-glow {
   filter: blur(120px);
-  background: linear-gradient(45deg, #bd9dff, #8a4cfc);
+  background: linear-gradient(45deg, #00C3A6, #008a75);
   opacity: 0.2;
 }
 

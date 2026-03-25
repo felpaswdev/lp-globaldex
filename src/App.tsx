@@ -1,5 +1,6 @@
 import './App.css'
 import GlobeCanvas from './components/GlobeCanvas'
+import LiquidBackground from './components/LiquidBackground'
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
       <nav className="fixed top-4 left-4 right-4 z-50 max-w-7xl mx-auto flex items-center justify-between px-8 h-16 rounded-2xl bg-neutral-950/80 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.8)]">
         <div className="flex items-center gap-8">
           <div className="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: 'linear-gradient(135deg, #bd9dff, #8a4cfc)' }}>B</div>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center text-xs font-black text-white" style={{ background: 'linear-gradient(135deg, #bd9dff, #008a75)' }}>B</div>
             Bandex
           </div>
           <div className="hidden md:flex gap-6 items-center text-sm font-medium tracking-tight">
@@ -19,25 +20,25 @@ function App() {
             <a className="text-neutral-400 hover:text-white transition-colors" href="#">Governance</a>
           </div>
         </div>
-        <button className="px-6 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-all active:scale-95 shadow-[0_0_20px_rgba(189,157,255,0.3)]" style={{ background: '#bd9dff', color: '#3c0089' }}>
+        <button className="px-6 py-2 rounded-full font-bold text-sm hover:opacity-90 transition-all active:scale-95 shadow-[0_0_20px_rgba(0,195,166,0.3)]" style={{ background: '#00C3A6', color: '#002a22' }}>
           Connect Wallet
         </button>
       </nav>
 
       {/* ── Hero ── */}
       <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full hero-glow" />
-          <div className="absolute inset-0 liquid-gradient" />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          <LiquidBackground />
+          <div className="absolute bottom-0 left-0 right-0 h-56" style={{ background: 'linear-gradient(to bottom, transparent, #0e0e0e)' }} />
         </div>
 
         <div className="relative z-10 max-w-4xl">
-          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] border rounded-full" style={{ color: '#bd9dff', borderColor: 'rgba(189,157,255,0.2)', background: 'rgba(189,157,255,0.05)' }}>
+          <span className="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-[0.2em] border rounded-full" style={{ color: '#00C3A6', borderColor: 'rgba(0,195,166,0.2)', background: 'rgba(0,195,166,0.05)' }}>
             O NOVO PADRÃO FINANCEIRO
           </span>
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-8 leading-[1.1]">
             Sua vida financeira, <br />
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #bd9dff, #c38bf5)' }}>
+            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(to right, #bd9dff, #00a88e)' }}>
               simplificada e integrada.
             </span>
           </h1>
@@ -45,7 +46,7 @@ function App() {
             A ponte definitiva entre o PIX e o ecossistema cripto. Gerencie seus ativos digitais com a mesma facilidade de uma transferência instantânea.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="px-10 py-4 font-extrabold rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(189,157,255,0.4)]" style={{ background: '#bd9dff', color: '#3c0089' }}>
+            <button className="px-10 py-4 font-extrabold rounded-full hover:scale-105 transition-transform shadow-[0_0_30px_rgba(0,195,166,0.4)]" style={{ background: '#00C3A6', color: '#002a22' }}>
               Começar Agora
             </button>
             <button className="px-10 py-4 glass-panel text-white font-bold rounded-full hover:bg-white/5 transition-all">
@@ -73,11 +74,11 @@ function App() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-8 left-8 right-8 p-6 glass-panel rounded-2xl flex items-center justify-between">
               <div>
-                <p className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: '#bd9dff' }}>Status</p>
+                <p className="text-xs font-bold tracking-widest uppercase mb-1" style={{ color: '#00C3A6' }}>Status</p>
                 <p className="text-xl font-bold">Liquidação Instantânea</p>
               </div>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#bd9dff' }} />
+                <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: '#00C3A6' }} />
                 <span className="text-sm font-medium">Ativo</span>
               </div>
             </div>
@@ -85,8 +86,8 @@ function App() {
 
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-3 mb-6">
-              <span className="material-symbols-outlined text-3xl" style={{ color: '#bd9dff' }}>payments</span>
-              <h2 className="font-bold tracking-wider text-sm uppercase" style={{ color: '#bd9dff' }}>Revolução em Pagamentos</h2>
+              <span className="material-symbols-outlined text-3xl" style={{ color: '#00C3A6' }}>payments</span>
+              <h2 className="font-bold tracking-wider text-sm uppercase" style={{ color: '#00C3A6' }}>Revolução em Pagamentos</h2>
             </div>
             <h3 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">
               PIX Instantâneo. <br />
@@ -102,7 +103,7 @@ function App() {
               ].map(({ icon, title, desc }) => (
                 <div key={title} className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0" style={{ background: '#201f1f' }}>
-                    <span className="material-symbols-outlined" style={{ color: '#bd9dff' }}>{icon}</span>
+                    <span className="material-symbols-outlined" style={{ color: '#00C3A6' }}>{icon}</span>
                   </div>
                   <div>
                     <h4 className="font-bold text-lg">{title}</h4>
@@ -118,7 +119,7 @@ function App() {
       {/* ── Crypto / Dashboard ── */}
       <section className="relative py-32" style={{ background: 'rgba(19,19,19,0.5)' }}>
         <div className="max-w-7xl mx-auto px-6 text-center mb-20">
-          <h2 className="font-bold tracking-widest text-sm uppercase mb-4" style={{ color: '#bd9dff' }}>Ecosistema Global</h2>
+          <h2 className="font-bold tracking-widest text-sm uppercase mb-4" style={{ color: '#00C3A6' }}>Ecosistema Global</h2>
           <h3 className="text-4xl md:text-6xl font-extrabold">O Futuro é Cripto.</h3>
         </div>
 
@@ -127,7 +128,7 @@ function App() {
           {/* Portfolio card */}
           <div className="glass-panel p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-500">
             <div className="flex justify-between items-start mb-8">
-              <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(189,157,255,0.1)', color: '#bd9dff' }}>
+              <div className="w-12 h-12 rounded-2xl flex items-center justify-center" style={{ background: 'rgba(0,195,166,0.1)', color: '#00C3A6' }}>
                 <span className="material-symbols-outlined">account_balance_wallet</span>
               </div>
               <div className="text-right">
@@ -137,11 +138,11 @@ function App() {
             </div>
             <div className="space-y-4">
               <div className="h-1.5 w-full rounded-full overflow-hidden" style={{ background: '#262626' }}>
-                <div className="h-full w-3/4 rounded-full" style={{ background: '#bd9dff' }} />
+                <div className="h-full w-3/4 rounded-full" style={{ background: '#00C3A6' }} />
               </div>
               <div className="flex justify-between text-xs" style={{ color: '#adaaaa' }}>
                 <span>Portfolio Health</span>
-                <span className="font-bold" style={{ color: '#bd9dff' }}>94%</span>
+                <span className="font-bold" style={{ color: '#00C3A6' }}>94%</span>
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between">
@@ -158,7 +159,7 @@ function App() {
           <div className="glass-panel p-8 rounded-[2rem] scale-105 z-10 hover:-translate-y-2 transition-all duration-500" style={{ background: 'rgba(23,23,23,0.8)' }}>
             <div className="flex items-center justify-between mb-8">
               <h4 className="font-bold">Smart Swap</h4>
-              <span className="material-symbols-outlined" style={{ color: '#bd9dff' }}>settings</span>
+              <span className="material-symbols-outlined" style={{ color: '#00C3A6' }}>settings</span>
             </div>
             <div className="space-y-2">
               <div className="p-4 rounded-2xl border border-white/5" style={{ background: 'rgba(38,38,38,0.5)' }}>
@@ -176,7 +177,7 @@ function App() {
               </div>
 
               <div className="flex justify-center relative z-10" style={{ marginTop: '-16px', marginBottom: '-16px' }}>
-                <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 cursor-pointer hover:rotate-180 transition-all duration-500" style={{ background: '#bd9dff', color: '#3c0089', borderColor: '#0e0e0e' }}>
+                <div className="w-10 h-10 rounded-full flex items-center justify-center shadow-lg border-4 cursor-pointer hover:rotate-180 transition-all duration-500" style={{ background: '#00C3A6', color: '#002a22', borderColor: '#0e0e0e' }}>
                   <span className="material-symbols-outlined text-sm">swap_vert</span>
                 </div>
               </div>
@@ -194,7 +195,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <button className="w-full mt-6 py-4 font-bold rounded-2xl shadow-[0_4px_20px_rgba(189,157,255,0.2)]" style={{ background: '#bd9dff', color: '#3c0089' }}>
+            <button className="w-full mt-6 py-4 font-bold rounded-2xl shadow-[0_4px_20px_rgba(0,195,166,0.2)]" style={{ background: '#00C3A6', color: '#002a22' }}>
               Execute Swap
             </button>
           </div>
@@ -203,7 +204,7 @@ function App() {
           <div className="glass-panel p-8 rounded-[2rem] hover:-translate-y-2 transition-all duration-500">
             <div className="flex justify-between items-center mb-8">
               <h4 className="font-bold">Yield Market</h4>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ color: '#bd9dff', background: 'rgba(189,157,255,0.1)' }}>Live</span>
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full" style={{ color: '#00C3A6', background: 'rgba(0,195,166,0.1)' }}>Live</span>
             </div>
             <div className="space-y-4">
               {[
@@ -217,7 +218,7 @@ function App() {
                     </div>
                     <span className="text-sm font-medium">{label}</span>
                   </div>
-                  <span className="text-sm font-bold" style={{ color: '#bd9dff' }}>{apy}</span>
+                  <span className="text-sm font-bold" style={{ color: '#00C3A6' }}>{apy}</span>
                 </div>
               ))}
             </div>
@@ -266,7 +267,7 @@ function App() {
             <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: 'linear-gradient(to right, #0e0e0e 35%, rgba(14,14,14,0.7) 65%, transparent)' }} />
 
             <div className="relative z-20 p-12 lg:p-20 max-w-2xl">
-              <h2 className="font-bold tracking-widest text-sm uppercase mb-6" style={{ color: '#bd9dff' }}>Security First</h2>
+              <h2 className="font-bold tracking-widest text-sm uppercase mb-6" style={{ color: '#00C3A6' }}>Security First</h2>
               <h3 className="text-4xl md:text-5xl font-extrabold mb-10 leading-tight">Infraestrutura Enterprise.</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
@@ -276,7 +277,7 @@ function App() {
                   { icon: 'gpp_good', title: 'Custódia Segura', desc: 'Sua chave, seus ativos. MPC wallet nativo para máxima proteção.' },
                 ].map(({ icon, title, desc }) => (
                   <div key={title} className="p-6 rounded-2xl border border-white/5 hover:bg-white/10 transition-all duration-300 backdrop-blur-md" style={{ background: 'rgba(255,255,255,0.04)' }}>
-                    <span className="material-symbols-outlined text-3xl mb-4 block" style={{ color: '#bd9dff' }}>{icon}</span>
+                    <span className="material-symbols-outlined text-3xl mb-4 block" style={{ color: '#00C3A6' }}>{icon}</span>
                     <h4 className="font-bold text-lg mb-2">{title}</h4>
                     <p className="text-sm" style={{ color: '#adaaaa' }}>{desc}</p>
                   </div>
